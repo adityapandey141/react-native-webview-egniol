@@ -37,6 +37,10 @@ const  App = () =>  {
 
     return () => backHandler.remove();
   }, [canGoBack]);
+
+
+
+   
     return (
       <SafeAreaView style={styles.AndroidSafeArea}>
         <WebView
@@ -45,7 +49,7 @@ const  App = () =>  {
           uri: 'https://egniol.co.in/'
         }}
          
-        style={{marginTop: 20}}
+        
               onLoadProgress={(event) => setCanGoBack(event.nativeEvent.canGoBack)}
               startInLoadingState
               renderLoading={()=>(
